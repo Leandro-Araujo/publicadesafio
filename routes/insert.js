@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET insert page. */
 router.get('/', function(req, res, next) {
-  res.render('insercao', { title: 'Insercao' });
+  res.render('insercao', { title: 'Insercao', linkactive: ["active", "active", "disabled"] });
 });
 
 module.exports = router;
