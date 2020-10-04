@@ -2,26 +2,26 @@
 <html>
 	<%- include('head', {title: title, linkactive: linkactive}); %>
 
-		<form>
+		<form method="POST" action="/insercao">
 		  <div class="form-group">
 		    <label for="inputPlacar">Placar</label>
-		    <input type="placar" class="form-control" id="inputPlacar" aria-describedby="Placar">
+		    <input type="placar" class="form-control placar" id="inputPlacar" aria-describedby="Placar" name="placar">
 		    <small id="placar" class="form-text text-muted">Por favor insira o placar</small>
 		  </div>
 
 		  <div class="form-group">
 		    <label for="inputPlacar">Mínimo da Temporada</label>
-		    <input type="placar" class="form-control" id="inputMin" aria-describedby="Placar">
+		    <input type="placar" class="form-control mintemp" id="inputMin" aria-describedby="Placar" name="min">
 		    <small id="placar" class="form-text text-muted">Por favor insira o Mínimo da Temporada</small>
 		  </div>
 
 		  <div class="form-group">
 		    <label for="inputPlacar">Máximo da Temporada</label>
-		    <input type="placar" class="form-control" id="inputMax" aria-describedby="Placar">
+		    <input type="placar" class="form-control maxtemp" id="inputMax" aria-describedby="Placar" name="max">
 		    <small id="placar" class="form-text text-muted">Por favor insira o Máximo da Temporada</small>
 		  </div>
 
-		  <button type="submit" class="btn btn-primary">Submit</button>
+		  <button type="submit" class="btn btn-primary inserir">Enviar</button>
 		</form>
 
 
@@ -29,5 +29,26 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<script>
+			/*$(".inserir").click(function(event){
+				event.preventDefault();
+				
+				var placar = $(".placar").val();
+				var minr = $(".mintemp").val();
+				var maxr = $(".maxtemp").val();
+				alert(placar);
+
+				$.ajax({
+				     url : "/ajaxinsert",
+				     data:{name: 'Karen'},
+				     type : 'post'
+				     
+				})
+				.done(function(msg){
+				     alert('oi');
+				})
+				return false;
+			});*/
+		</script>
 	</body>
 </html>

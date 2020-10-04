@@ -14,30 +14,16 @@
 		    </tr>
 		  </thead>
 		  <tbody>
+		  	<% data.forEach(function(dados, key){ %>
 		    <tr>
-		      <th scope="row">1</th>
-		      <td>Mark</td>
-		      <td>Otto</td>
-		      <td>@mdo</td>
-		      <td>@mdo</td>
-		      <td>@mdo</td>
+		      <th scope="row"><%= key+1 %></th>
+		      <td><%= dados.placar %></td>
+		      <td><%= dados.minTemp  %></td>
+		      <td><%= dados.maxTemp  %></td>
+		      <% if(dados.placar >= dados.minTemp){ %><td>1</td><% }else{ %> <td>0</td><% } %>
+		      <% if(dados.placar >= dados.maxTemp){ %><td>1</td><% }else{ %> <td>0</td><% } %>
 		    </tr>
-		    <tr>
-		      <th scope="row">2</th>
-		      <td>Jacob</td>
-		      <td>Thornton</td>
-		      <td>@fat</td>
-		      <td>@mdo</td>
-		      <td>@mdo</td>
-		    </tr>
-		    <tr>
-		      <th scope="row">3</th>
-		      <td>Larry</td>
-		      <td>the Bird</td>
-		      <td>@twitter</td>
-		      <td>@mdo</td>
-		      <td>@mdo</td>
-		    </tr>
+		    <% }) %>
 		  </tbody>
 		</table>
 

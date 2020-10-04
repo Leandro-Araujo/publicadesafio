@@ -10,6 +10,7 @@ var banco = require('./model/db');
 var indexRouter = require('./routes/index');
 var visualizacao = require('./routes/view');
 var insercao = require('./routes/insert');
+var ajaxinsert = require('./routes/ajax/insert');
 
 var app = express();
 
