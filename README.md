@@ -35,18 +35,18 @@ localhost:3000
 
 O site tem três diretórios
 
-######O index.Que permite ver a quantidade total de records
+###### O index.Que permite ver a quantidade total de records
 '''
 localhost:3000/
 '''
 
-######Visualizacao. Permite ver cada placar.
+###### Visualizacao. Permite ver cada placar.
 
 '''
 http://localhost:3000/visualizacao
 '''
 
-######Inserção. Permite inserir cada rodada.
+###### Inserção. Permite inserir cada rodada.
 
 '''
 http://localhost:3000/insercao
